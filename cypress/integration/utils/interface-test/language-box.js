@@ -16,16 +16,16 @@ const test = () => {
     setLanguage("English", "en")
   })
   it("Should be able to set french language from text", () => {
-    setLanguage("French", "fr")
+    setLanguage("Français", "fr")
   })
   it("Should be able to set chinese language from text", () => {
-    setLanguage("Chinese", "cn")
+    setLanguage("汉语", "cn")
   })
   it("Should be able to set portugese language from text", () => {
-    setLanguage("Portuguese", "pt")
+    setLanguage("Português", "pt")
   })
   it("Should be able to set dutch language from text", () => {
-    setLanguage("Dutch", "nl")
+    setLanguage("Néerlandais", "nl")
   })
 }
 

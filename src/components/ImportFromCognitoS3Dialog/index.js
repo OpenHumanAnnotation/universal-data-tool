@@ -55,6 +55,7 @@ export default ({ open, onClose, onAddSamples }) => {
       }
       hasChanged = true
     }
+    console.log(hasChanged)
     if (hasChanged) {
       setConfigImport({
         ...configToSet,

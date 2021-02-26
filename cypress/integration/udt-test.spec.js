@@ -7,16 +7,20 @@ import pasteImageUrlsWithCSV from "./utils/interface-test/paste-image-urls-with-
 import pasteImageUrls from "./utils/interface-test/paste-image-urls"
 import textEntityClassification from "./utils/interface-test/text-entity-classification"
 import defaultTemplate from "./utils/interface-test/default-template"
+import commandSetTemplate from "./utils/cypress-command/set-template"
 import templateNonVisible from "./utils/interface-test/template-non-visble"
+import languageBoxTest from "./utils/interface-test/language-box"
 import commandSetLanguage from "./utils/cypress-command/set-language"
 
 commandSetLanguage()
+commandSetTemplate()
 
 Cypress.config("defaultCommandTimeout", 3000)
 describe("Udt test", () => {
   beforeEach("Prepare test", () => {
     cy.visit(`http://localhost:6001`)
     cy.setLanguage("en")
+    cy.setTemplate("Empty")
   })
   templateNonVisible()
   defaultTemplate()
@@ -28,4 +32,5 @@ describe("Udt test", () => {
   pasteImageUrlsWithCSV()
   pasteImageUrls()
   textEntityClassification()
+  languageBoxTest()
 })

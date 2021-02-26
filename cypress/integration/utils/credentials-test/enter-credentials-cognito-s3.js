@@ -1,3 +1,4 @@
+require("cypress-xpath")
 const enterCredentialsCognitoS3 = () => {
   cy.get('input[placeholder="XX-XXXX-X:XXXXXXXX-XXXX-1234-abcd-1234567890ab"]')
     .focus()
