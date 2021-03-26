@@ -44,3 +44,4 @@ cypress/screenshots
 .idea
 *.db
 .vercel
+.parcel-cache

@@ -11,3 +11,4 @@ cypress/snapshots/*
 cypress/videos/*
 cypress/screenshots/*
 yarn.lock
+.parcel-cache
