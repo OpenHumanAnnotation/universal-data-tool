@@ -27,4 +27,9 @@ import { addMatchImageSnapshotCommand } from "cypress-image-snapshot/command"
 // https://github.com/abramenal/cypress-file-upload
 import "cypress-file-upload"
 
-addMatchImageSnapshotCommand()
+addMatchImageSnapshotCommand({
+  failureThreshold: 0.05,
+  failureThresholdType: "percent",
+  customDiffConfig: { threshold: 0.1 },
+  capture: "viewport",
+})

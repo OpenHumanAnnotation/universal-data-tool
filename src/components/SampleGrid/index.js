@@ -71,6 +71,7 @@ const Sample = memo(
         onMouseUp={() => onMouseUp(index)}
         onMouseEnter={() => onMouseEnter(index)}
         color={getBrushColorPalette(brush)}
+        id={"sample" + index}
       >
         {index}
       </SampleDiv>
