@@ -1,3 +1,5 @@
+import importAWS from "../utils/aws-unit-test/import-aws"
+
 import commandLocalStorage from "../utils/cypress-command/local-storage"
 import commandCredentialsAws from "../utils/cypress-command/credentials-aws"
 import commandCleanAws from "../utils/cypress-command/clean-aws"
@@ -27,6 +29,8 @@ if (Cypress.env().AWS_IDENTITY_POOL_ID)
     beforeEach("Go to import page", () => {
       cy.restoreLocalStorage()
     })
+
+    importAWS()
 
     //Comment below when debugging 1 test
     afterEach("Return to home page", () => {
