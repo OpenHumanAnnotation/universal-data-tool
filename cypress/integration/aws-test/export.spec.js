@@ -1,3 +1,5 @@
+import exportAWS from "../utils/aws-unit-test/export-aws"
+
 import commandSetLanguage from "../utils/cypress-command/set-language"
 import commandLocalStorage from "../utils/cypress-command/local-storage"
 import commandAddAssetToAwsProject from "../utils/cypress-command/add-asset-to-aws-project"
@@ -29,6 +31,8 @@ if (Cypress.env().AWS_IDENTITY_POOL_ID)
     beforeEach("Go to import page", () => {
       cy.restoreLocalStorage()
     })
+
+    exportAWS() //Always the last test. Aws change after this
 
     //Comment below when debugging 1 test
     afterEach("Return to home page", () => {
